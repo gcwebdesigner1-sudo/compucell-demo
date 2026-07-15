@@ -8,6 +8,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,600&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23101418'/%3E%3Ctext x='32' y='45' font-family='Arial Black,Arial' font-size='38' font-weight='900' fill='%23ff7a1a' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MobilePhoneStore","name":"CompuCell Sales & Repairs","telephone":"+14192665213","address":{"@type":"PostalAddress","streetAddress":"3015 N Holland Sylvania Rd","addressLocality":"Toledo","addressRegion":"OH","postalCode":"43615"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.7","reviewCount":"48"},"priceRange":"$$"}
+</script>
 <style>
   :root{
     --orange:#ff7a1a;
@@ -27,7 +31,8 @@
   img{max-width:100%;display:block}
   a{color:inherit;text-decoration:none}
   .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
-  section{padding:88px 0}
+  section{padding:88px 0;scroll-margin-top:76px}
+  ::selection{background:var(--orange);color:#fff}
   .kicker{font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--orange);font-size:.95rem}
   h1,h2,h3{font-family:'Barlow Condensed',sans-serif;line-height:1.05;text-transform:uppercase}
   h2{font-size:clamp(2.1rem,4.5vw,3.2rem);font-weight:800;margin:.35rem 0 1rem}
@@ -47,6 +52,7 @@
   .nav ul a{font-weight:600;font-size:.98rem;color:var(--muted);transition:color .2s}
   .nav ul a:hover{color:#fff}
   .btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;border-radius:999px;padding:14px 26px;transition:transform .15s,box-shadow .15s;cursor:pointer}
+  .btn:active{transform:translateY(0) scale(.97)}
   .btn-orange{background:linear-gradient(135deg,var(--orange),var(--orange-hot));color:#fff;box-shadow:0 8px 24px rgba(255,110,20,.35)}
   .btn-orange:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(255,110,20,.45)}
   .btn-ghost{border:1.5px solid rgba(255,255,255,.25);color:#fff}
@@ -151,6 +157,10 @@
 
   .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
   .reveal.in{opacity:1;transform:none}
+  .svc-grid>*:nth-child(3n+2),.steps>*:nth-child(2),.rev-grid>*:nth-child(2){transition-delay:.09s}
+  .svc-grid>*:nth-child(3n),.steps>*:nth-child(3),.rev-grid>*:nth-child(3){transition-delay:.18s}
+  .rev{transition:transform .22s,border-color .22s}
+  .rev:hover{transform:translateY(-4px);border-color:rgba(255,122,26,.45)}
 
   /* floating call button (mobile) */
   .float-call{display:none;position:fixed;right:18px;bottom:18px;z-index:60;width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--orange),var(--orange-hot));box-shadow:0 10px 28px rgba(255,110,20,.5);place-items:center;font-size:1.5rem}
