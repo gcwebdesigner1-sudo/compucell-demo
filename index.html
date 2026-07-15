@@ -65,9 +65,12 @@
   .hero::before{content:"";position:absolute;inset:0;background:url('images/maps1.jpg') center 32%/cover no-repeat}
   .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(13,16,20,.96) 30%,rgba(13,16,20,.72) 58%,rgba(13,16,20,.35));}
   .hero .wrap{position:relative;z-index:2}
-  .hero h1{font-size:clamp(2.9rem,6.5vw,5.2rem);font-weight:900;max-width:760px}
+  .hero h1{font-size:clamp(3.6rem,11vw,8rem);font-weight:900;letter-spacing:.005em;line-height:.95}
   .hero h1 em{font-style:normal;color:var(--orange)}
-  .hero p{margin:22px 0 32px;font-size:1.18rem;color:#cfd8df;max-width:560px}
+  .lockup{font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:.52em;text-transform:uppercase;color:#fff;font-size:clamp(.95rem,2vw,1.35rem);margin:14px 0 4px}
+  .city{font-family:'Barlow Condensed',sans-serif;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--orange);font-size:clamp(1rem,2.2vw,1.4rem);margin-bottom:26px}
+  .tags{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:32px}
+  .tag{border:1px solid rgba(255,122,26,.45);color:#ffd9b8;background:rgba(255,122,26,.08);padding:8px 16px;border-radius:999px;font-size:.92rem;font-weight:600}
   .hero-ctas{display:flex;gap:16px;flex-wrap:wrap}
   .hero-badges{display:flex;gap:28px;margin-top:46px;flex-wrap:wrap}
   .hbadge{display:flex;align-items:center;gap:12px}
@@ -187,7 +190,7 @@
 </head>
 <body>
 
-<div class="topbar">🚗 <b>We've gone fully mobile!</b> Pickup &amp; drop-off at your door, anywhere in the Toledo area — call <a href="tel:+14192665213" style="text-decoration:underline"><b>(419) 266-5213</b></a></div>
+<div class="topbar">🚗 <b>100% Mobile</b> · Pickup &amp; Drop-Off At Your Door · <a href="tel:+14192665213" style="text-decoration:underline"><b>(419) 266-5213</b></a></div>
 
 <header>
   <div class="wrap nav">
@@ -211,12 +214,14 @@
 
 <section class="hero">
   <div class="wrap">
-    <span class="kicker">Toledo, Ohio · Mobile Tech Repair</span>
-    <h1>Tech repair that <em>comes to you</em></h1>
-    <p>Cracked screens, dead batteries, slow computers, broken consoles — CompuCell picks up your device, fixes it fast, and delivers it right back to your door.</p>
+    <span class="kicker">Mobile Tech Repair · We Come To You</span>
+    <h1><em>Compu</em>Cell</h1>
+    <div class="lockup">Sales &amp; Repairs</div>
+    <div class="city">Toledo, Ohio</div>
+    <div class="tags"><span class="tag">📱 Phones</span><span class="tag">💻 Computers</span><span class="tag">🎮 Consoles</span><span class="tag">💾 Data Recovery</span></div>
     <div class="hero-ctas">
-      <a class="btn btn-orange" href="tel:+14192665213">📞 Call for a same-day quote</a>
-      <a class="btn btn-ghost" href="#services">See what we fix</a>
+      <a class="btn btn-orange" href="tel:+14192665213">📞 (419) 266-5213</a>
+      <a class="btn btn-ghost" href="#services">Our Services</a>
     </div>
     <div class="hero-badges">
       <div class="hbadge"><div class="ic">⭐</div><div><b><span class="stars">★★★★★</span> 4.7 rating</b><span>48 Google reviews</span></div></div>
