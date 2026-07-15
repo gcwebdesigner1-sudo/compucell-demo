@@ -147,6 +147,7 @@
   /* estimate form */
   .est-form{max-width:620px;margin:38px auto 0;text-align:left;background:rgba(23,29,35,.94);border:1px solid rgba(255,122,26,.42);border-radius:var(--radius);padding:30px 30px 24px;box-shadow:0 24px 60px rgba(0,0,0,.5)}
   .est-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .est-row-2{grid-template-columns:1.6fr 1fr}
   .field{margin-bottom:16px}
   .field label{display:block;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.92rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
   .field input,.field select,.field textarea{width:100%;background:var(--ink);border:1px solid var(--line);border-radius:10px;color:var(--text);padding:13px 14px;font-family:'Barlow',sans-serif;font-size:1rem;resize:vertical}
@@ -386,9 +387,25 @@
           </select>
         </div>
       </div>
+      <div class="est-row est-row-2">
+        <div class="field">
+          <label for="ef-address">Address (needed for pickup)</label>
+          <input id="ef-address" type="text" placeholder="Street address, city" autocomplete="street-address" required>
+        </div>
+        <div class="field">
+          <label for="ef-time">Best time for pickup</label>
+          <select id="ef-time">
+            <option>Anytime / ASAP</option>
+            <option>Morning</option>
+            <option>Afternoon</option>
+            <option>Evening</option>
+            <option>Weekend</option>
+          </select>
+        </div>
+      </div>
       <div class="field">
         <label for="ef-issue">What's going on with it?</label>
-        <textarea id="ef-issue" rows="3" placeholder="e.g. iPhone 13 — screen cracked, still turns on"></textarea>
+        <textarea id="ef-issue" rows="3" placeholder="e.g. iPhone 13 — screen cracked, still turns on" required></textarea>
       </div>
       <button class="btn btn-orange" type="submit">💬 Send estimate request</button>
       <p class="est-note">Opens in your messaging app and sends as a normal text to <a href="sms:+14192665213">(419) 266-5213</a> — nothing is stored online. Prefer to talk? <a href="tel:+14192665213">Call the same number</a>.</p>
@@ -435,7 +452,12 @@
     const name=document.getElementById('ef-name').value.trim();
     const device=document.getElementById('ef-device').value;
     const issue=document.getElementById('ef-issue').value.trim();
-    let msg='Hi CompuCell!'+(name?" I'm "+name+'.':'')+' '+device+(issue?' — '+issue:'')+'. Can I get a free estimate?';
+    const address=document.getElementById('ef-address').value.trim();
+    const time=document.getElementById('ef-time').value;
+    let msg='Hi CompuCell!'+(name?" I'm "+name+'.':'')+' '+device+(issue?' — '+issue:'')+'.'
+      +(address?' Pickup address: '+address+'.':'')
+      +(time?' Best time: '+time+'.':'')
+      +' Can I get a free estimate?';
     window.location.href='sms:+14192665213?&body='+encodeURIComponent(msg);
   });
 </script>
