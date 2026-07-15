@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CompuCell Sales &amp; Repairs — Mobile Phone, Computer &amp; Console Repair in Toledo, OH</title>
-<meta name="description" content="CompuCell Sales & Repairs is Toledo's mobile tech repair service. Phone screens, computers, game consoles, data recovery & more — we come to you. Call (419) 266-5213.">
+<meta name="description" content="CompuCell Sales & Repairs is Toledo's 100% mobile tech repair service — no storefront, we come to you. Phones, laptops, consoles, any electronic, tech support. Text (419) 266-5213 for a free estimate.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,600&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23101418'/%3E%3Ctext x='32' y='45' font-family='Arial Black,Arial' font-size='38' font-weight='900' fill='%23ff7a1a' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"MobilePhoneStore","name":"CompuCell Sales & Repairs","telephone":"+14192665213","address":{"@type":"PostalAddress","streetAddress":"3015 N Holland Sylvania Rd","addressLocality":"Toledo","addressRegion":"OH","postalCode":"43615"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.7","reviewCount":"48"},"priceRange":"$$"}
+{"@context":"https://schema.org","@type":"MobilePhoneStore","name":"CompuCell Sales & Repairs","telephone":"+14192665213","address":{"@type":"PostalAddress","addressLocality":"Toledo","addressRegion":"OH"},"areaServed":"Toledo, OH and surrounding areas","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.7","reviewCount":"48"},"priceRange":"$$"}
 </script>
 <style>
   :root{
@@ -62,7 +62,7 @@
 
   /* hero */
   .hero{position:relative;min-height:92vh;display:flex;align-items:center;padding:110px 0}
-  .hero::before{content:"";position:absolute;inset:0;background:url('images/maps1.jpg') center 32%/cover no-repeat}
+  .hero::before{content:"";position:absolute;inset:0;background:url('images/stock-chip.jpg') center/cover no-repeat}
   .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(13,16,20,.96) 30%,rgba(13,16,20,.72) 58%,rgba(13,16,20,.35));}
   .hero .wrap{position:relative;z-index:2}
   .hero h1{font-size:clamp(3.6rem,11vw,8rem);font-weight:900;letter-spacing:.005em;line-height:.95}
@@ -105,6 +105,10 @@
   .svc h3{font-size:1.4rem;margin-bottom:8px}
   .svc p{color:var(--muted);font-size:.97rem}
   .svc .tag{position:absolute;top:14px;left:14px;background:rgba(16,20,24,.85);border:1px solid rgba(255,122,26,.5);color:var(--orange);font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 11px;border-radius:999px}
+  .svc-wide{grid-column:1/-1;display:flex;align-items:center;gap:26px;border-color:rgba(255,122,26,.45);background:linear-gradient(120deg,var(--ink-2),rgba(255,122,26,.09))}
+  .svc-wide .body{flex:1;padding:30px 32px}
+  .svc-wide .btn{margin-right:32px;flex:none}
+  @media(max-width:680px){.svc-wide{flex-direction:column;align-items:stretch;gap:0}.svc-wide .btn{margin:0 26px 26px;justify-content:center}}
 
   /* why */
   .why{background:var(--ink-2)}
@@ -190,7 +194,7 @@
 </head>
 <body>
 
-<div class="topbar">🚗 <b>100% Mobile</b> · Pickup &amp; Drop-Off At Your Door · <a href="tel:+14192665213" style="text-decoration:underline"><b>(419) 266-5213</b></a></div>
+<div class="topbar">🚗 <b>100% Mobile — No Storefront, We Come To You</b> · Text <a href="sms:+14192665213" style="text-decoration:underline"><b>(419) 266-5213</b></a> for a free estimate</div>
 
 <header>
   <div class="wrap nav">
@@ -214,27 +218,27 @@
 
 <section class="hero">
   <div class="wrap">
-    <span class="kicker">Mobile Tech Repair · We Come To You</span>
+    <span class="kicker">100% Mobile Tech Repair · We Come To You</span>
     <h1><em>Compu</em>Cell</h1>
     <div class="lockup">Sales &amp; Repairs</div>
     <div class="city">Toledo, Ohio</div>
-    <div class="tags"><span class="tag">📱 Phones</span><span class="tag">💻 Computers</span><span class="tag">🎮 Consoles</span><span class="tag">💾 Data Recovery</span></div>
+    <div class="tags"><span class="tag">📱 Phones</span><span class="tag">💻 Laptops &amp; Computers</span><span class="tag">🎮 Consoles</span><span class="tag">🛠️ Tech Support</span><span class="tag">🔌 Any Electronic</span></div>
     <div class="hero-ctas">
-      <a class="btn btn-orange" href="tel:+14192665213">📞 (419) 266-5213</a>
-      <a class="btn btn-ghost" href="#services">Our Services</a>
+      <a class="btn btn-orange" href="sms:+14192665213">💬 Text for a free estimate</a>
+      <a class="btn btn-ghost" href="tel:+14192665213">📞 (419) 266-5213</a>
     </div>
     <div class="hero-badges">
       <div class="hbadge"><div class="ic">⭐</div><div><b><span class="stars">★★★★★</span> 4.7 rating</b><span>48 Google reviews</span></div></div>
-      <div class="hbadge"><div class="ic">🚗</div><div><b>Pickup &amp; drop-off</b><span>We come to you</span></div></div>
-      <div class="hbadge"><div class="ic">⚡</div><div><b>Same-day quotes</b><span>Fast turnaround</span></div></div>
+      <div class="hbadge"><div class="ic">🚗</div><div><b>Fully mobile</b><span>No storefront — we come to you</span></div></div>
+      <div class="hbadge"><div class="ic">💬</div><div><b>Estimates by text</b><span>(419) 266-5213</span></div></div>
     </div>
   </div>
 </section>
 
 <div class="strip" aria-hidden="true">
   <div class="strip-track">
-    <span>📱 Phone Screens</span><span>🔋 Battery Replacement</span><span>💻 Computer Repair</span><span>🎮 Console Repair</span><span>🔌 Charging Ports</span><span>💾 Data Recovery</span><span>📷 Security Systems</span><span>🔁 Buy · Sell · Trade</span>
-    <span>📱 Phone Screens</span><span>🔋 Battery Replacement</span><span>💻 Computer Repair</span><span>🎮 Console Repair</span><span>🔌 Charging Ports</span><span>💾 Data Recovery</span><span>📷 Security Systems</span><span>🔁 Buy · Sell · Trade</span>
+    <span>📱 Phone Screens</span><span>💻 Laptops &amp; Computers</span><span>🛠️ Technical Support</span><span>🎮 Console Repair</span><span>🔌 Any Electronic</span><span>💾 Data Recovery</span><span>📷 Security Systems</span><span>🔁 Buy · Sell · Trade</span>
+    <span>📱 Phone Screens</span><span>💻 Laptops &amp; Computers</span><span>🛠️ Technical Support</span><span>🎮 Console Repair</span><span>🔌 Any Electronic</span><span>💾 Data Recovery</span><span>📷 Security Systems</span><span>🔁 Buy · Sell · Trade</span>
   </div>
 </div>
 
@@ -244,7 +248,7 @@
     <h2>Repairs in three easy steps</h2>
     <p class="lead">Forget fighting traffic or rushing across town before close. Whether you're at home, at the office, or at a coffee shop — we meet you there.</p>
     <div class="steps">
-      <div class="step reveal"><div class="num">01</div><h3>We pick it up</h3><p>Call or text to schedule a time and place that works for you. We'll meet you at your location and text you updates on our way.</p></div>
+      <div class="step reveal"><div class="num">01</div><h3>Text us first</h3><p>Text (419) 266-5213 with what's broken and get a free estimate. Then we schedule a pickup time and place that works for you.</p></div>
       <div class="step reveal"><div class="num">02</div><h3>We fix it fast</h3><p>High-level diagnostics and component-level repairs, done quickly and professionally with honest, up-front pricing.</p></div>
       <div class="step reveal"><div class="num">03</div><h3>We bring it back</h3><p>Once it's fixed, we deliver your device right back to your door — good as new and ready to go.</p></div>
     </div>
@@ -258,7 +262,7 @@
         <span class="kicker">What we fix</span>
         <h2 style="margin-bottom:0">If it has a chip,<br>we can fix it</h2>
       </div>
-      <a class="btn btn-ghost" href="tel:+14192665213">Get a free quote →</a>
+      <a class="btn btn-ghost" href="sms:+14192665213">💬 Text for a free estimate →</a>
     </div>
     <div class="svc-grid">
       <div class="svc reveal">
@@ -285,6 +289,13 @@
         <div class="ph"><img src="images/stock-devices.jpg" alt="Buy sell trade devices"></div>
         <div class="body"><h3>🔁 Buy · Sell · Trade</h3><p>Quality pre-owned phones, tablets, and computers — plus fair cash offers for your old devices and prepaid plan setup.</p></div>
       </div>
+      <div class="svc svc-wide reveal">
+        <div class="body">
+          <h3>🛠️ Tech Support · Any Electronic</h3>
+          <p>If it plugs in or powers on, we can help — setup, troubleshooting, repairs, and honest advice on any electronic device. Not sure if we fix it? <b style="color:var(--text)">Text a photo to (419) 266-5213</b> and get a free estimate.</p>
+        </div>
+        <a class="btn btn-orange" href="sms:+14192665213">💬 Text us</a>
+      </div>
     </div>
   </div>
 </section>
@@ -294,7 +305,7 @@
     <div>
       <span class="kicker">The CompuCell difference</span>
       <h2>Toledo's tech shop,<br>without the shop trip</h2>
-      <p class="lead">CompuCell built its name at 3015 N Holland Sylvania Rd with honest prices and repairs done right. Now we bring that same service to your doorstep.</p>
+      <p class="lead">CompuCell built its name in Toledo with honest prices and repairs done right. Now we're <b style="color:var(--text)">100% mobile</b> — no storefront, no counter, no waiting room. The same trusted service, brought straight to your door.</p>
       <div class="why-list">
         <div class="why-item reveal"><div class="ic">🤝</div><div><b>Honest, up-front pricing</b><p>Same-day quotes with no surprises — our customers call us the most reasonable prices in the area.</p></div></div>
         <div class="why-item reveal"><div class="ic">🔬</div><div><b>Component-level repairs</b><p>We don't just swap parts. Real board-level diagnostics mean more fixes and lower costs.</p></div></div>
@@ -303,7 +314,7 @@
       </div>
     </div>
     <div class="why-photos">
-      <img class="tall" src="images/maps2.jpg" alt="CompuCell Sales and Repairs storefront sign">
+      <img class="tall" src="images/stock-devices.jpg" alt="Phones, laptops and tablets — devices CompuCell repairs">
       <img class="sq" src="images/maps3.jpg" alt="Computer repair on the CompuCell workbench">
       <img class="sq" src="images/stock-gpu.jpg" alt="PC hardware upgrades">
     </div>
@@ -342,9 +353,9 @@
   <div class="wrap">
     <span class="kicker">Broken device?</span>
     <h2>Get it fixed without leaving home</h2>
-    <p>Call or text now for a free same-day quote. We'll schedule a pickup that fits your day.</p>
-    <a class="phone-big" href="tel:+14192665213">(419) 266-5213</a>
-    <a class="btn btn-orange" href="tel:+14192665213">📞 Call CompuCell now</a>
+    <p>Text us what's broken and get a free same-day estimate. We'll schedule a pickup that fits your day — fully mobile, we come to you.</p>
+    <a class="phone-big" href="sms:+14192665213">(419) 266-5213</a>
+    <a class="btn btn-orange" href="sms:+14192665213">💬 Text for a free estimate</a>
   </div>
 </section>
 
@@ -353,14 +364,14 @@
     <div>
       <span class="kicker">Get in touch</span>
       <h2>Serving Toledo<br>&amp; surrounding areas</h2>
-      <div class="c-item"><div class="ic">📞</div><div><b>Call or text</b><a class="link" href="tel:+14192665213">(419) 266-5213</a></div></div>
-      <div class="c-item"><div class="ic">🚗</div><div><b>Mobile service</b><p>Pickup &amp; drop-off at your home, office, or wherever you are — by appointment, with same-day quotes.</p></div></div>
-      <div class="c-item"><div class="ic">📍</div><div><b>Home base</b><p>3015 N Holland Sylvania Rd, Toledo, OH 43615</p><a class="link" href="https://www.google.com/maps/search/?api=1&query=CompuCell%20Sales%20and%20Repairs%2C%20Toledo%2C%20OH" target="_blank" rel="noopener">View on Google Maps →</a></div></div>
+      <div class="c-item"><div class="ic">💬</div><div><b>Text for a free estimate</b><a class="link" href="sms:+14192665213">(419) 266-5213</a><p>Texting is the fastest way to get a quote — or call the same number.</p></div></div>
+      <div class="c-item"><div class="ic">🚗</div><div><b>100% mobile — no storefront</b><p>Pickup &amp; drop-off at your home, office, or wherever you are — by appointment, with same-day quotes.</p></div></div>
+      <div class="c-item"><div class="ic">📍</div><div><b>Service area</b><p>Toledo, OH &amp; surrounding areas</p><a class="link" href="https://www.google.com/maps/search/?api=1&query=CompuCell%20Sales%20and%20Repairs%2C%20Toledo%2C%20OH" target="_blank" rel="noopener">Find us on Google →</a></div></div>
       <div class="c-item"><div class="ic">⭐</div><div><b>4.7 stars on Google</b><p>48 reviews from Toledo customers</p></div></div>
     </div>
     <div class="map-card reveal">
-      <img src="images/maps1.jpg" alt="CompuCell Sales and Repairs, Toledo Ohio">
-      <div class="overlay"><b>CompuCell Sales &amp; Repairs</b><p>Now 100% mobile — professional tech repair, delivered to your door.</p></div>
+      <img src="images/maps3.jpg" alt="Component-level repair on the CompuCell workbench" style="object-position:center">
+      <div class="overlay"><b>CompuCell Sales &amp; Repairs</b><p>100% mobile — professional tech repair, delivered to your door. Text (419) 266-5213.</p></div>
     </div>
   </div>
 </section>
