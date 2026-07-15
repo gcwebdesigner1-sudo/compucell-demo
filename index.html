@@ -144,6 +144,19 @@
   .band p{color:var(--muted);max-width:520px;margin:14px auto 34px;font-size:1.1rem}
   .band .phone-big{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2rem,4.6vw,3rem);font-weight:800;color:var(--orange);display:block;margin-bottom:26px;letter-spacing:.02em}
 
+  /* estimate form */
+  .est-form{max-width:620px;margin:38px auto 0;text-align:left;background:rgba(23,29,35,.94);border:1px solid rgba(255,122,26,.42);border-radius:var(--radius);padding:30px 30px 24px;box-shadow:0 24px 60px rgba(0,0,0,.5)}
+  .est-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .field{margin-bottom:16px}
+  .field label{display:block;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.92rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
+  .field input,.field select,.field textarea{width:100%;background:var(--ink);border:1px solid var(--line);border-radius:10px;color:var(--text);padding:13px 14px;font-family:'Barlow',sans-serif;font-size:1rem;resize:vertical}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--orange)}
+  .field input::placeholder,.field textarea::placeholder{color:#5f6b76}
+  .est-form .btn{width:100%;justify-content:center;font-size:1.08rem;border:0}
+  .est-note{margin:16px 0 0;font-size:.88rem;color:var(--muted);text-align:center}
+  .est-note a{color:var(--orange)}
+  @media(max-width:680px){.est-row{grid-template-columns:1fr}.est-form{padding:24px 20px 20px}}
+
   /* contact */
   .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
   .c-item{display:flex;gap:18px;padding:22px 0;border-bottom:1px solid var(--line)}
@@ -224,7 +237,7 @@
     <div class="city">Toledo, Ohio</div>
     <div class="tags"><span class="tag">📱 Phones</span><span class="tag">💻 Laptops &amp; Computers</span><span class="tag">🎮 Consoles</span><span class="tag">🛠️ Tech Support</span><span class="tag">🔌 Any Electronic</span></div>
     <div class="hero-ctas">
-      <a class="btn btn-orange" href="sms:+14192665213">💬 Text for a free estimate</a>
+      <a class="btn btn-orange" href="#estimate">💬 Get a free estimate</a>
       <a class="btn btn-ghost" href="tel:+14192665213">📞 (419) 266-5213</a>
     </div>
     <div class="hero-badges">
@@ -262,7 +275,7 @@
         <span class="kicker">What we fix</span>
         <h2 style="margin-bottom:0">If it has a chip,<br>we can fix it</h2>
       </div>
-      <a class="btn btn-ghost" href="sms:+14192665213">💬 Text for a free estimate →</a>
+      <a class="btn btn-ghost" href="#estimate">💬 Get a free estimate →</a>
     </div>
     <div class="svc-grid">
       <div class="svc reveal">
@@ -349,13 +362,37 @@
   </div>
 </section>
 
-<section class="band">
+<section class="band" id="estimate">
   <div class="wrap">
-    <span class="kicker">Broken device?</span>
+    <span class="kicker">Broken device? Free estimate by text</span>
     <h2>Get it fixed without leaving home</h2>
-    <p>Text us what's broken and get a free same-day estimate. We'll schedule a pickup that fits your day — fully mobile, we come to you.</p>
-    <a class="phone-big" href="sms:+14192665213">(419) 266-5213</a>
-    <a class="btn btn-orange" href="sms:+14192665213">💬 Text for a free estimate</a>
+    <p>Fill this out and hit send — it opens as a regular text message to us from your phone. Free same-day estimates, and we come to you.</p>
+    <form class="est-form" id="estForm">
+      <div class="est-row">
+        <div class="field">
+          <label for="ef-name">Your name</label>
+          <input id="ef-name" type="text" placeholder="First name" autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="ef-device">What needs fixing?</label>
+          <select id="ef-device">
+            <option>iPhone / iPad</option>
+            <option>Android phone or tablet</option>
+            <option>Laptop / MacBook</option>
+            <option>Desktop / workstation</option>
+            <option>Game console</option>
+            <option>Wi-Fi / smart home / cameras</option>
+            <option>Other electronic</option>
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        <label for="ef-issue">What's going on with it?</label>
+        <textarea id="ef-issue" rows="3" placeholder="e.g. iPhone 13 — screen cracked, still turns on"></textarea>
+      </div>
+      <button class="btn btn-orange" type="submit">💬 Send estimate request</button>
+      <p class="est-note">Opens in your messaging app and sends as a normal text to <a href="sms:+14192665213">(419) 266-5213</a> — nothing is stored online. Prefer to talk? <a href="tel:+14192665213">Call the same number</a>.</p>
+    </form>
   </div>
 </section>
 
@@ -391,6 +428,16 @@
   menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  const estForm=document.getElementById('estForm');
+  estForm.addEventListener('submit',e=>{
+    e.preventDefault();
+    const name=document.getElementById('ef-name').value.trim();
+    const device=document.getElementById('ef-device').value;
+    const issue=document.getElementById('ef-issue').value.trim();
+    let msg='Hi CompuCell!'+(name?" I'm "+name+'.':'')+' '+device+(issue?' — '+issue:'')+'. Can I get a free estimate?';
+    window.location.href='sms:+14192665213?&body='+encodeURIComponent(msg);
+  });
 </script>
 </body>
 </html>
